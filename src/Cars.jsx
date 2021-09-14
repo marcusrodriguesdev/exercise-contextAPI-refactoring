@@ -7,6 +7,7 @@ import carYellow from './images/carYellow.jpeg';
 
 class Cars extends React.Component {
   render() {
+
     const { red: redCar, blue: blueCar, yellow: yellowCar } = this.context.cars;
     console.log(this);
     const { moveCar } = this.context;
@@ -54,7 +55,6 @@ class Cars extends React.Component {
         </div>
       </div>
     );
-
   }
 }
 
