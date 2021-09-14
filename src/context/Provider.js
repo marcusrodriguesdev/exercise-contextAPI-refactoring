@@ -40,13 +40,11 @@ class Provider extends Component {
   render() {
     const context = {
       ...this.state,
-      changeTraffic: this.changeTraffic,
       moveCar: this.moveCar,
     };
-
     const { children } = this.props;
 
-    return (
+    return(
       <CarsContext.Provider
         value={ context }
       >

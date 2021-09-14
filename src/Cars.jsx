@@ -7,18 +7,21 @@ import carYellow from './images/carYellow.jpeg';
 
 class Cars extends React.Component {
   render() {
-    const { red, blue, yellow } = this.context.cars;
+
+    const { red: redCar, blue: blueCar, yellow: yellowCar } = this.context.cars;
+    console.log(this);
     const { moveCar } = this.context;
+
     return (
       <div>
         <div>
           <img
-            className={red ? 'car-right' : 'car-left'}
+            className={redCar ? 'car-right' : 'car-left'}
             src={carRed}
             alt="red car"
           />
           <button
-            onClick={() => moveCar('red', !red)}
+            onClick={() => moveCar('red', !redCar)}
             type="button"
           >
             Move
@@ -26,12 +29,12 @@ class Cars extends React.Component {
         </div>
         <div>
           <img
-            className={blue ? 'car-right' : 'car-left'}
+            className={blueCar ? 'car-right' : 'car-left'}
             src={carBlue}
             alt="blue car"
           />
           <button
-            onClick={() => moveCar('blue', !blue)}
+            onClick={() => moveCar('blue', !blueCar)}
             type="button"
           >
             Move
@@ -39,12 +42,12 @@ class Cars extends React.Component {
         </div>
         <div>
           <img
-            className={yellow ? 'car-right' : 'car-left'}
+            className={yellowCar ? 'car-right' : 'car-left'}
             src={carYellow}
             alt="yellow car"
           />
           <button
-            onClick={() => moveCar('yellow', !yellow)}
+            onClick={() => moveCar('yellow', !yellowCar)}
             type="button"
           >
             Move
